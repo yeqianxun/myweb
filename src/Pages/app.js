@@ -5,8 +5,6 @@ import {Provider} from "react-redux";
 import Store from "../Store/index";
 import HomePage from "./Home/index";
 import Blog from "./Blog/index";
-
-
 import * as app from "./app.scss";
 
  class App extends React.Component{

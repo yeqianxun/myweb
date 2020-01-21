@@ -7,7 +7,7 @@
   url('iconfont.svg?t=1579585946488#iconfont') format('svg'); /* iOS 4.1- */
 }
 
-.iconfont {
+:global(.iconfont) {
   font-family: "iconfont" !important;
   font-size: 16px;
   font-style: normal;
@@ -15,23 +15,23 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-top:before {
+:global(.icon-top:before){
   content: "\e600";
 }
 
-.icon-search:before {
+:global(.icon-search:before) {
   content: "\e649";
 }
 
-.icon-user:before {
+:global(.icon-user:before){
   content: "\e601";
 }
 
-.icon-emial:before {
+:global(.icon-emial:before) {
   content: "\e602";
 }
 
-.icon-email-copy:before {
+:global(.icon-email-copy:before) {
   content: "\e64a";
 }
 
