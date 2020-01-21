@@ -1,0 +1,44 @@
+{
+  "id": "1620406",
+  "name": "myweb",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "10627",
+      "name": "top",
+      "font_class": "top",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "8112691",
+      "name": "searching-magnifying-glass",
+      "font_class": "search",
+      "unicode": "e649",
+      "unicode_decimal": 58953
+    },
+    {
+      "icon_id": "10815915",
+      "name": "user",
+      "font_class": "user",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "12887343",
+      "name": "185078 - email mail streamline",
+      "font_class": "emial",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "12897980",
+      "name": "185078 - email mail streamline",
+      "font_class": "email-copy",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    }
+  ]
+}

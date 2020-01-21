@@ -1,0 +1,62 @@
+.blog_header{
+    position: relative;
+    height: 56px;
+    border-bottom: 1px solid #f0f0f0;
+    .blog_logo{
+        display: block;
+        position: absolute;
+        top:0;
+        left:0;
+        height: 56px;
+        width:100px;
+        background-size:contain;
+        background-image:url("../../../assets/images/logo.png");
+    }
+    .blog_header_wrapper{
+        width:960px;
+        background: rgba(225,225,225,0.5);
+        height: 56px;
+        margin: 0 auto;   
+    }
+    .blog_nav{
+        width:600px;
+        border:1px solid red;
+    }
+    .blog_index,.blog_app_download,.blog_search{
+        display: table-cell;
+        text-align: center;
+        height: 56px;
+        vertical-align: middle;
+
+    }
+    //伪元素居中文本
+    // .blog_index::before,.blog_app_download::before{
+    //     content:" ";
+    //     vertical-align: middle;
+    //     display: inline-block;
+    //     height: 100%;
+    // }
+    .blog_index{
+        width: 60px;
+        background:green;
+    }
+    .blog_app_download{
+        width: 100px;
+        background:red;
+    }
+    .blog_search{
+        background-color: yellow;
+        // width: 160px;
+        position: relative;
+        input{
+            // position: absolute;
+            box-sizing: border-box;
+            width: 160px;
+            height: 38px;
+            padding: 0 20px;
+            border:0;
+            outline: none;
+            border-radius: 19px;
+        }
+    }
+}

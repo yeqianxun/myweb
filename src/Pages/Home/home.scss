@@ -1,0 +1,54 @@
+.home_container{
+    width: 100%;
+    text-align: center;
+    @at-root.home_section{
+        margin: 0 auto;
+        width:60%;
+        position: absolute;
+        background-color:white;
+        height: 100%;
+        left:50%;
+        margin-left:-30%;
+        .home_wrapper{
+            position: relative;
+            top:30%;
+            .home_link a{
+                color: rgba(0,0,0,0.75);
+                font-size: 14px;
+                display: inline-block;
+                margin:5px 15px;
+               &:hover{
+                    text-decoration: underline;
+                    color: blue;
+               }
+            }
+        }
+    }
+    .home_content{
+        text-align: center;
+        margin: 0 15%;
+        font-size: 14px;
+        color:rgba(0,0,0,0.65);
+    }
+    .home_logo{
+        background:url("../../assets//images/koaReact.png") no-repeat center center;
+        height: 150px;
+        width: 240px;
+        margin: 0 auto;
+        background-size:cover;
+    }
+    .home_email {
+        position: absolute;
+        bottom: 0;;
+        text-align: center;
+        width: 100%;
+        font-size: 12px;
+        color: #4e4b4b;
+        a{
+            color:#4e4b4b;
+            &:hover{
+                color: blue;
+            }
+        }
+    }
+}
