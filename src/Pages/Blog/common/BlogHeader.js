@@ -1,7 +1,7 @@
 import React, { Component,Fragment } from "react";
 import {connect} from "react-redux";
 import {CSSTransition} from "react-transition-group";
-import * as Creator from "./store/actionCreator";
+import * as Creator from "../store/actionCreator";
 import {Link} from "react-router-dom";
 import style from "./BlogHeader.scss";
 
@@ -50,7 +50,7 @@ class BlogHeader extends Component{
 
 const mapState2Props = (state)=>{
     return {
-        focused:state.getIn(["header","focused"])
+        focused:state.getIn(["blog","focused"])
     }
 }
 const mapDispatch2Props = (dispatch)=>{

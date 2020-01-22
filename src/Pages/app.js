@@ -15,6 +15,7 @@ import * as app from "./app.scss";
                 <Router>
                     <Switch>
                         <Route exact path="/" component={HomePage} />
+                        <Route path="/blog/airticle/:id" component={Blog}/>
                         <Route path="/blog" component={Blog} />
                      </Switch>
                 </Router>

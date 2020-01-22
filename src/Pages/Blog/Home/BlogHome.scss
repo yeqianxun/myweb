@@ -1,0 +1,20 @@
+.bhome_wrapper{
+    width: 960px; 
+    margin: 0 auto;
+    margin-top:60px;
+    .bhome_left{
+        width: 600px;
+        padding-right: 24px;
+        height: 600px;
+        // background: green;
+        // border-right: 1px solid #ccc;
+        float: left;
+    
+    }
+    .bhome_right{
+        width: 320px;
+        margin-left:15px;
+        // height: 600px;
+        float: right;
+    }
+}

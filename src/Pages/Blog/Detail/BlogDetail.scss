@@ -1,0 +1,19 @@
+.blog_detail_container{
+    border:1px solid red;
+    width: 960px;
+    margin:0 auto;
+    margin-top:60px;
+    .blog_detail_title{
+        text-align: center;
+    }
+    .blog_detail_wrapper{
+        width: 620px;
+        margin:60px auto;
+        columns: rgb(64,64,64);
+        p{
+            font-size: 16;
+            line-height: 30px;
+            margin: 25px 0;
+        }
+    }
+}

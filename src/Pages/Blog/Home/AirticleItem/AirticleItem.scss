@@ -1,0 +1,29 @@
+.article_item_container{
+    height: 125px;
+    border-bottom:1px solid #f0f0f0;
+    display: table-cell;
+    vertical-align: middle;
+    .airticle_content{
+        float: left;
+        width: 500px;
+        h3{
+            color:#2f2f2f;
+        }
+        p{
+            color: #999;
+            font-size: 12px;
+        }
+    }
+    .airticle_img{
+        float: right;
+        width: 100px;
+        height: 100px;
+        // display: table-cell;
+        // vertical-align: middle;
+        img{
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
+}

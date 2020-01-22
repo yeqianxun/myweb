@@ -7,3 +7,20 @@ body,html,#root{
 a{
     text-decoration: none;
 }
+ul{
+    margin:0;
+}
+li,ol{
+    list-style: none;
+}
+b{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+i{
+    font-style: normal;
+}

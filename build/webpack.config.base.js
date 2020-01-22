@@ -9,7 +9,7 @@ const HardSourceWebpackPlugin = require("hard-source-webpack-plugin");
 const {entry,entryFiles,htmlWebpackPlugins} = config.MultiplySPA();
 const isEnvDevelopment = process.env.NODE_ENV ==="development"?true:false;
 let entryArr = isEnvDevelopment?["react-hot-loader/patch"].concat(entryFiles):entryFiles;
-
+console.log(path.join(__dirname,"..","src/assets/images"))
 module.exports = {
         entry:entryArr,
         output:{
@@ -68,6 +68,12 @@ module.exports = {
                         }
                     }]
                 }]
+        },
+        resolve:{
+            alias:{
+                "@img":path.join(__dirname,"..","src/assets/images")
+            },
+            extensions:[".js",".jsx",".ts"]
         },
         plugins:[
             new CleanWebpackPlugin(),
