@@ -1,5 +1,7 @@
 import React, { Component,Fragment } from "react";
 import {connect} from "react-redux";
+import BlogHeader  from "../common/BlogHeader";
+import BlogDetail from "../Detail/BlogDetail";
 import Author from "./Author/Author";
 import AirticleItem from "./AirticleItem/AirticleItem";
 import * as  Creator from "../store/actionCreator";
@@ -21,8 +23,6 @@ class BlogHome extends Component{
     renderAirticleLists(){
         const {airticleLists} = this.props
         const originAirticleList = airticleLists.toJS();
-        // console.log("didMount===>",airticleLists.toJS());
-
         return originAirticleList.map(element => {
             return <AirticleItem
              id={element.id}
@@ -34,9 +34,9 @@ class BlogHome extends Component{
         });
     }
     render(){
-        // console.log()
         return (
             <Fragment>
+                <BlogHeader />
                 <div className={`${style.bhome_wrapper} clearfix`}>
                     <div className={style.bhome_left}>
                             {this.renderAirticleLists()}
@@ -44,7 +44,7 @@ class BlogHome extends Component{
                     <div className={style.bhome_right}>
                         <Author />
                     </div>
-                </div>
+               </div>
             </Fragment>
         )
     }

@@ -4,7 +4,8 @@ import {BrowserRouter as Router,Route,Switch} from "react-router-dom";
 import {Provider} from "react-redux";
 import Store from "../Store/index";
 import HomePage from "./Home/index";
-import Blog from "./Blog/index";
+import DetailLoadable from "./Blog/Detail/DetailLoadable";
+import BlogHome from "./Blog/Home/BlogHome";
 import * as app from "./app.scss";
 
  class App extends React.Component{
@@ -15,8 +16,8 @@ import * as app from "./app.scss";
                 <Router>
                     <Switch>
                         <Route exact path="/" component={HomePage} />
-                        <Route path="/blog/airticle/:id" component={Blog}/>
-                        <Route path="/blog" component={Blog} />
+                        <Route path="/blog/airticle/:id" component={DetailLoadable}/>
+                        <Route path="/blog" component={BlogHome} />
                      </Switch>
                 </Router>
             </Provider>

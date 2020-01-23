@@ -18,13 +18,13 @@ class articleItem extends Component{
                         </div>
                         <div className={style.author_article}>
                             <ul>
-                                <li><Link to="/article?keyword=backend"><span className={`iconfont icon-emial`}></span>后端开发</Link></li>
-                                <li><Link to="/article?keyword=hardwork"><span className={`iconfont icon-emial`}></span>征程路上</Link></li>
-                                <li><Link to="/article?keyword=linux"><span className={`iconfont icon-emial`}></span>Linux笔录</Link></li>
-                                <li><Link to="/article?keyword=problem"><span className={`iconfont icon-emial`}></span>开发问题</Link></li>
-                                <li><Link to="/article?keyword=scan"><span className={`iconfont icon-emial`}></span>技术探索</Link></li>
-                                <li><Link to="/article?keyword=mobile"><span className={`iconfont icon-emial`}></span>移动开发</Link></li>
-                                <li><Link to="/article?keyword=web"><span className={`iconfont icon-emial`}></span>前端开发</Link></li>  
+                                <li><Link to="/blog/Category?keyword=backend"><span className={`iconfont icon-emial`}></span>后端开发</Link></li>
+                                <li><Link to="/blog/Category?keyword=hardwork"><span className={`iconfont icon-emial`}></span>征程路上</Link></li>
+                                <li><Link to="/blog/Category?keyword=linux"><span className={`iconfont icon-emial`}></span>Linux笔录</Link></li>
+                                <li><Link to="/blog/Category?keyword=problem"><span className={`iconfont icon-emial`}></span>开发问题</Link></li>
+                                <li><Link to="/blog/Category?keyword=scan"><span className={`iconfont icon-emial`}></span>技术探索</Link></li>
+                                <li><Link to="/blog/Category?keyword=mobile"><span className={`iconfont icon-emial`}></span>移动开发</Link></li>
+                                <li><Link to="/blog/Category?keyword=web"><span className={`iconfont icon-emial`}></span>前端开发</Link></li>  
                             </ul>
                         </div>
                 </div>
