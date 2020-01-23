@@ -8,7 +8,7 @@ class articleItem extends Component{
 
     render(){
         return (
-            <Fragment>
+            <div>
                 <div className={`${style.item_wrapper} clearfix`}>
                 <img src={me}  />
                         <div className={style.item_mypic}>
@@ -28,7 +28,7 @@ class articleItem extends Component{
                             </ul>
                         </div>
                 </div>
-            </Fragment>
+            </div>
         )
     }
 }

@@ -35,7 +35,7 @@ class BlogHome extends Component{
     }
     render(){
         return (
-            <Fragment>
+            <div>
                 <BlogHeader />
                 <div className={`${style.bhome_wrapper} clearfix`}>
                     <div className={style.bhome_left}>
@@ -45,7 +45,7 @@ class BlogHome extends Component{
                         <Author />
                     </div>
                </div>
-            </Fragment>
+            </div>
         )
     }
 }

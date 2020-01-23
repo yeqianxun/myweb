@@ -11,7 +11,6 @@ import * as app from "./app.scss";
  class App extends React.Component{
     render(){
         return (
-        <div>
             <Provider  store={Store} >
                 <Router>
                     <Switch>
@@ -21,7 +20,6 @@ import * as app from "./app.scss";
                      </Switch>
                 </Router>
             </Provider>
-        </div>
         )
     }
 }

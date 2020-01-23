@@ -15,7 +15,7 @@ class BlogHeader extends Component{
     render(){
         const {focused,handleBlur,handleFcous} = this.props;
         return (
-            <Fragment>
+            <div>
             <header className={style.blog_header}>
               <Link to="/" > <span className={style.blog_logo}></span> </Link>
               <div className={style.blog_header_wrapper}>
@@ -43,7 +43,7 @@ class BlogHeader extends Component{
                   </div>
               </div>
             </header>
-            </Fragment>
+            </div>
         )
     }
 }

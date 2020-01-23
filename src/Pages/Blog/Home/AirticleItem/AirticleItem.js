@@ -7,7 +7,7 @@ class ArticleItem extends Component{
     render(){
         const {id,title,imgUrl,desc} = this.props;
         return (
-            <Fragment>
+            <div>
                 <Link to={`/blog/airticle/${id}`}>
                     <div className={`${style.article_item_container} clearfix`}>
                          <div className={style.airticle_content}>
@@ -19,7 +19,7 @@ class ArticleItem extends Component{
                          </div>
                     </div>
                 </Link>
-            </Fragment>
+            </div>
         )
     }
 }

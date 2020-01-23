@@ -1,7 +1,8 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import {connect} from "react-redux";
 import {withRouter} from "react-router-dom";
 import BlogHeader from "../common/BlogHeader";
+// import { hot } from 'react-hot-loader/root';
 import style from "./BlogDetail.scss";
 
 
@@ -20,12 +21,12 @@ class BlogDetail extends Component{
     }
     render(){
         return(
-            <Fragment>
+            <div>
                 <BlogHeader/>
                 <div className={style.blog_detail_container}>
                     {this.getBlogDetail()}
                 </div>
-            </Fragment>
+            </div>
         )
     }
 }
@@ -39,4 +40,6 @@ const mapDispatch2Props =(dispatch)=>{
 
     }
 }
+
+
 export default connect(mapState2Props,mapDispatch2Props)(withRouter(BlogDetail));
