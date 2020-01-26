@@ -17,19 +17,19 @@ class BlogHome extends Component{
         }
     }
     componentDidMount(){
-        const {getArticleList} = this.props;
-        getArticleList();
+        const {fetchBlogList} = this.props;
+        fetchBlogList();
     }
     renderAirticleLists(){
-        const {airticleLists} = this.props
-        const originAirticleList = airticleLists.toJS();
-        return originAirticleList.map(element => {
+        const {airticleLists} = this.props;
+        // console.log("yangxinglong===>didMount",airticleLists)
+        return airticleLists.map(element => {
             return <AirticleItem
-             id={element.id}
-             desc={element.desc}
+             id={element._id}
+             desc={`${element.content.substring(0,80)}...`}
              title={element.title}
-             imgUrl={element.ImgUrl}
-             key={element.id*Math.random()}
+             imgUrl={element.imgUrl}
+             key={element._id}
              />
         });
     }
@@ -56,8 +56,8 @@ const mapState2Props = (state)=>{
 }
 const mapDispatch2Props = (dispatch)=>{
     return {
-        getArticleList(){
-            dispatch(Creator.getArticleList())
+        fetchBlogList(){
+            dispatch(Creator.fetchBlogList())
         }
     }
 }

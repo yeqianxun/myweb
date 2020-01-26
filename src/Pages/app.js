@@ -15,7 +15,7 @@ import * as app from "./app.scss";
                 <Router>
                     <Switch>
                         <Route exact path="/" component={HomePage} />
-                        <Route path="/blog/airticle/:id" component={DetailLoadable}/>
+                        <Route path="/blog/detail/:id" component={DetailLoadable}/>
                         <Route path="/blog" component={BlogHome} />
                      </Switch>
                 </Router>

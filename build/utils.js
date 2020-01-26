@@ -6,7 +6,7 @@ module.exports = {
         publicPath:"/assets/"
     },
     build:{
-        publicPath:"assets/"
+        publicPath:"http://47.103.140.10:3003/assets/"
     },
     MultiplySPA(){
         const entry = {};
@@ -14,7 +14,7 @@ module.exports = {
         const entryFiles = glob.sync(path.join(__dirname,"../src/entry/**/index.js"));
         // Object.keys()。对象返回属性名，数组返回索引值
         Object.keys(entryFiles).map((index)=>{
-            let entryFile = entryFiles[index];
+            let entryFile =  entryFiles[index];
             let match = entryFile.match(/src\/entry\/(.*)\/index.js/);
             let pageName = match && match[1];
             console.log("yangxinglong----<",pageName)

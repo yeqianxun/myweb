@@ -5,22 +5,7 @@ import png2 from "@img/2.png";
 import png3 from "@img/3.png";
 const defaultState = fromJS({
     focused:false,
-    airticleLists:[{
-		"id":1,
-		"title":"开始学习 Docker",
-		"ImgUrl":png1,
-		"desc":"<b>Word联盟 http://www.wordlm.com/ Word联盟是一个专注Word教程的网站，它提供包括：海量Word模板免费下载，Wo...</b>"
-	},
-	{	"id":2,
-		"title":"Spring Cloud OAuth2 token存数据库实现",
-		"ImgUrl":png2,
-		"desc":"<i>python中的args和kw：*args：表示就是将实参中按照位置传值，多余的值都给args，且以元组的方式呈现**kw：表示就是形参中按照关...</i>"
-	},{
-		"id":3,
-		"title":"正向代理与反向代理的区别",
-		"ImgUrl":png3,
-		"desc":"<i>python中的args和kw：Word联盟是一个专注Word教程的网站余的值都给args，且以元组的方式呈现**kw：表示就是形参中按照关...</i>"
-	}],
+    airticleLists:[],
     "airticleDetail":[{
 			"id":1,
 			"title":"衡水中学，一所被外人占领的高考工厂",
@@ -47,7 +32,8 @@ const BlogReducer = (state=defaultState,action)=>{
         case Types["SEARCH_INPUT_BLUR"]:
             return state.set("focused",false);
         case Types["GET_ARTICLE_LIST"]:
-            return state;
+			// console.log("yangxinglong=====blogReucer",action.data)
+            return state.set("airticleLists",action.data);
         default:
             return state;
     }

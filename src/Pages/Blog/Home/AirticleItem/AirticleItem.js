@@ -8,7 +8,7 @@ class ArticleItem extends Component{
         const {id,title,imgUrl,desc} = this.props;
         return (
             <div>
-                <Link to={`/blog/airticle/${id}`}>
+                <Link to={`/blog/detail/${id}`}>
                     <div className={`${style.article_item_container} clearfix`}>
                          <div className={style.airticle_content}>
                                 <h3>{title}</h3>
