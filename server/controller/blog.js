@@ -10,12 +10,14 @@ class BlogController {
     }
     async getBlogList(ctx,next){
         let blogs = await BlogDetailModel.find({});
-    
-
-         blogs.forEach((item,index)=>{
-            return `${item.content.substring(0,80)}...`
-        });
-        return ctx.body = blogs;
+        ctx.body = blogs;
+        await next();
+    }
+    async getBlogDetail(ctx,next){
+        console.log(ctx.params.id)
+        let blogItem = await BlogDetailModel.findById({"_id":ctx.params.id});
+        ctx.body = blogItem;
+        await next();
     }
 }
 module.exports = new BlogController();

@@ -13,11 +13,23 @@ export const getArticleList = (data)=>({
     type:Types["GET_ARTICLE_LIST"],
     data
 });
+export const getAirticleDetail=(data)=>({
+    type:Types["GET_BLOG_DETAIL"],
+    data
+})
 export const fetchBlogList = ()=>{
     return (dispatch)=>{
         Axios.get("/api/blog").then((res)=>{
-            // console.log("yangxinglong=====fetchBlogList",res);
             dispatch(getArticleList(res.data))
+        })
+    }
+};
+export const fetchBlogDetail = (detailId)=>{
+    return (dispatch)=>{
+        console.log("yangxinglong======fetchBlogDetail",detailId)
+        Axios.get(`/api/blog/detail/${detailId}`).then((res)=>{
+            console.log("wwwwwwwww",res)
+            dispatch(getAirticleDetail(res.data));
         })
     }
 }

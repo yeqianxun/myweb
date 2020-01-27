@@ -22,7 +22,6 @@ class BlogHome extends Component{
     }
     renderAirticleLists(){
         const {airticleLists} = this.props;
-        // console.log("yangxinglong===>didMount",airticleLists)
         return airticleLists.map(element => {
             return <AirticleItem
              id={element._id}

@@ -2,22 +2,37 @@ import React, { Component } from "react";
 import {connect} from "react-redux";
 import {withRouter} from "react-router-dom";
 import BlogHeader from "../common/BlogHeader";
+import * as Creator from "../store/actionCreator";
+
 // import { hot } from 'react-hot-loader/root';
 import style from "./BlogDetail.scss";
 
 
 class BlogDetail extends Component{
+    constructor(props){
+        super(props)
+        this.state = {
 
+        }
+    }
+    componentDidMount(){
+        const {dispatchBlogDetail} = this.props;
+        const {params} = this.props.match
+        dispatchBlogDetail(params.id);
+    }
     getBlogDetail(){
         const {airticleDetail} = this.props;
         const {params} = this.props.match;
-        let detailItem =  airticleDetail.toJS();
-        return (
-            <div className={style.blog_detail_wrapper}>
-                <h1 className={style.blog_detail_title}> {detailItem[parseInt(params.id)-1].title}</h1>
-                <div dangerouslySetInnerHTML={{__html:detailItem[parseInt(params.id)-1].content}}></div>
-            </div>
-        )
+        console.log("yangxinglong===========ygetblogDETAIL",params,airticleDetail)
+        if(airticleDetail._id){
+            return (
+                <div className={style.blog_detail_wrapper}>
+                    <h1 className={style.blog_detail_title}> {airticleDetail.title}</h1>
+                    <div dangerouslySetInnerHTML={{__html:airticleDetail.content}}></div>
+                </div>
+            )
+        }
+
     }
     render(){
         return(
@@ -37,7 +52,9 @@ const mapState2Props = (state)=>{
 }
 const mapDispatch2Props =(dispatch)=>{
     return {
-
+        dispatchBlogDetail(id){
+            dispatch(Creator.fetchBlogDetail(id));
+        }
     }
 }
 
