@@ -11,7 +11,7 @@ log4js.configure({
   application: {
    type: 'dateFile',
    pattern: '-yyyy-MM-dd.log',
-   filename: path.join('/logs/', 'application.log')
+   filename: path.join("..",'logs/', 'application.log')
   },
   out: {
    type: 'console'
