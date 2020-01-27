@@ -10,13 +10,17 @@ class BlogController {
     }
     async getBlogList(ctx,next){
         let blogs = await BlogDetailModel.find({});
+        console.log("yangxinglong===>/blog",ctx.url)
         ctx.body = blogs;
+        console.log("yangxinglong===getBlogList",blogs)
         await next();
     }
     async getBlogDetail(ctx,next){
         console.log(ctx.params.id)
         let blogItem = await BlogDetailModel.findById({"_id":ctx.params.id});
+        console.log("yangxinglong=============>getBlogDetail",blogItem,ctx.params.id)
         ctx.body = blogItem;
+
         await next();
     }
 }

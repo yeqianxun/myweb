@@ -30,7 +30,7 @@ app.use(Cors({
         if(ctx.url==="/api"){
           return "*"
         }
-        return "http://localhost:8888";
+        return "*";
     },
     exposeHeaders: ['WWW-Authenticate', 'Server-Authorization'],
     maxAge: 5,
