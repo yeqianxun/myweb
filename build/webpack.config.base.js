@@ -76,7 +76,10 @@ module.exports = {
             extensions:[".js",".jsx",".ts"]
         },
         plugins:[
-            new CleanWebpackPlugin(),
+            new CleanWebpackPlugin({
+                dangerouslyAllowCleanPatternsOutsideProject:true,
+                cleanAfterEveryBuildPatterns:["../dist"]
+            }),
             new HardSourceWebpackPlugin()
         ]
 };
