@@ -6,7 +6,7 @@ module.exports = {
         publicPath:"/assets/"
     },
     build:{
-        publicPath:"http://47.103.140.10:3003/assets/"
+        publicPath:"/"
     },
     MultiplySPA(){
         const entry = {};

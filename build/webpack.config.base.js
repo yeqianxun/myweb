@@ -77,9 +77,6 @@ module.exports = {
         },
         plugins:[
             new CleanWebpackPlugin(),
-            new MinCssExtractPlugin({
-                filename:"[name]-[contenthash:3].css"
-            }),
             new HardSourceWebpackPlugin()
         ]
 };

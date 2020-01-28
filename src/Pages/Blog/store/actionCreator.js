@@ -19,7 +19,7 @@ export const getAirticleDetail=(data)=>({
 })
 export const fetchBlogList = ()=>{
     return (dispatch)=>{
-        Axios.get("/api/blog").then((res)=>{
+        Axios.get("http://47.103.140.10:3003/blog").then((res)=>{
             dispatch(getArticleList(res.data))
         })
     }
@@ -27,8 +27,7 @@ export const fetchBlogList = ()=>{
 export const fetchBlogDetail = (detailId)=>{
     return (dispatch)=>{
         console.log("yangxinglong======fetchBlogDetail",detailId)
-        Axios.get(`/api/blog/detail/${detailId}`).then((res)=>{
-            console.log("wwwwwwwww",res)
+        Axios.get(`http://47.103.140.10:3003/blog/detail/${detailId}`).then((res)=>{
             dispatch(getAirticleDetail(res.data));
         })
     }

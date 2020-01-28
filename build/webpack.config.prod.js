@@ -3,13 +3,47 @@ const BaseWebpackConfig = require("./webpack.config.base");
 const {CleanWebpackPlugin}  = require("clean-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const MinCssExtractPlugin = require("mini-css-extract-plugin");
 const utils = require("./utils");
 let  {htmlWebpackPlugins } = utils.MultiplySPA();
 
 const ProdWebpackConfig = {
     mode:"production",
+    output:{
+        filename:"assets/js/[name].bundle.js",
+        chunkFilename:"assets/js/[name]-[chunkHash:3].chunk.js",
+    },
+    module:{
+        rules:[
+            {
+                test:/\.(jpg|jpeg|png|gif)$/i,
+                use:[
+                    {
+                        loader:"file-loader",
+                        options:{
+                            name:"assets/images/[name]_[hash:5].[ext]"
+                        }
+                    }
+                ]
+            },
+            {
+                test:/\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/i,
+                use:[
+                    {
+                        loader:"url-loader",
+                        options:{
+                            name:"assets/fonts/[name]__[hash:5].[ext]"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
     plugins:[
         new CleanWebpackPlugin(),
+        new MinCssExtractPlugin({
+            filename:"assets/style/[name]-[contenthash:3].css"
+        })
     ].concat(htmlWebpackPlugins),
     optimization:{
         minimizer:[
