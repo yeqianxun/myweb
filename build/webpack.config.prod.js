@@ -10,8 +10,8 @@ let  {htmlWebpackPlugins } = utils.MultiplySPA();
 const ProdWebpackConfig = {
     mode:"production",
     output:{
-        filename:"assets/js/[name].bundle.js",
-        chunkFilename:"assets/js/[name]-[chunkHash:3].chunk.js",
+        filename:"js/[name].bundle.js",
+        chunkFilename:"js/[name]-[chunkHash:3].chunk.js",
     },
     module:{
         rules:[
@@ -21,7 +21,7 @@ const ProdWebpackConfig = {
                     {
                         loader:"file-loader",
                         options:{
-                            name:"assets/images/[name]_[hash:5].[ext]"
+                            name:"images/[name]_[hash:5].[ext]"
                         }
                     }
                 ]
@@ -32,7 +32,7 @@ const ProdWebpackConfig = {
                     {
                         loader:"url-loader",
                         options:{
-                            name:"assets/fonts/[name]__[hash:5].[ext]"
+                            name:"fonts/[name]__[hash:5].[ext]"
                         }
                     }
                 ]
@@ -42,7 +42,7 @@ const ProdWebpackConfig = {
     plugins:[
         new CleanWebpackPlugin(),
         new MinCssExtractPlugin({
-            filename:"assets/style/[name]-[contenthash:3].css"
+            filename:"style/[name]-[contenthash:3].css"
         })
     ].concat(htmlWebpackPlugins),
     optimization:{
