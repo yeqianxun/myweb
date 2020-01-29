@@ -42,7 +42,7 @@ const ProdWebpackConfig = {
     plugins:[
         new CleanWebpackPlugin(),
         new MinCssExtractPlugin({
-            filename:"style/[name]-[contenthash:3].css"
+            filename:"css/[name]-[contenthash:3].css"
         })
     ].concat(htmlWebpackPlugins),
     optimization:{

@@ -17,12 +17,12 @@ module.exports = {
             let entryFile =  entryFiles[index];
             let match = entryFile.match(/src\/entry\/(.*)\/index.js/);
             let pageName = match && match[1];
-            console.log("yangxinglong----<",pageName)
+
             entry[pageName] = entryFile;
             htmlWebpackPlugins.push(
                 new HtmlWebpackPlugin({
                     template:path.join(__dirname,`../src/entry/${pageName}/index.html`),
-                    filename:`${pageName}.html`,
+                    filename:"index.html",
                     inject:true,
                     chunks:["main"],
                     minify:{
