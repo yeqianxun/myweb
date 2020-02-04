@@ -10,34 +10,8 @@ let  {htmlWebpackPlugins } = utils.MultiplySPA();
 const ProdWebpackConfig = {
     mode:"production",
     output:{
-        filename:"js/[name].bundle.js",
+        filename:"js/[name]_[hash:3].bundle.js",
         chunkFilename:"js/[name]-[chunkHash:3].chunk.js",
-    },
-    module:{
-        rules:[
-            {
-                test:/\.(jpg|jpeg|png|gif)$/i,
-                use:[
-                    {
-                        loader:"file-loader",
-                        options:{
-                            name:"images/[name]_[hash:5].[ext]"
-                        }
-                    }
-                ]
-            },
-            {
-                test:/\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/i,
-                use:[
-                    {
-                        loader:"url-loader",
-                        options:{
-                            name:"fonts/[name]__[hash:5].[ext]"
-                        }
-                    }
-                ]
-            }
-        ]
     },
     plugins:[
         new CleanWebpackPlugin(),

@@ -28,7 +28,9 @@ module.exports = {
                 {
                     test:/\.(scss|sass)$/,
                     use:[
-                            process.env.NODE_ENV==="production"? MinCssExtractPlugin.loader:"style-loader",
+                            process.env.NODE_ENV!=="production"? "style-loader":{
+                                loader:MinCssExtractPlugin.loader
+                            },
                         {
                             loader:"css-loader",
                             options:{
@@ -56,7 +58,8 @@ module.exports = {
                     use:[{
                         loader:"file-loader",
                         options:{
-                            name:"images/[name]__[hash:5].[ext]"
+                            name:"images/[name]__[hash:5].[ext]",
+                         
                         }
                     }]
                 },{
@@ -76,10 +79,7 @@ module.exports = {
             extensions:[".js",".jsx",".ts"]
         },
         plugins:[
-            new CleanWebpackPlugin({
-                dangerouslyAllowCleanPatternsOutsideProject:true,
-                cleanAfterEveryBuildPatterns:["../dist"]
-            }),
+            new CleanWebpackPlugin(),
             new HardSourceWebpackPlugin()
         ]
 };
