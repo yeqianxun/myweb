@@ -1,6 +1,15 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: Steven Yang
+ * @Date: 2020-01-20 12:19:25
+ * @LastEditors: Steven Yang
+ * @LastEditTime: 2020-06-05 21:28:08
+ */ 
 const glob = require('glob');
 const path = require("path")
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+
 module.exports = {
     dev:{
         publicPath:"/assets/"
@@ -27,13 +36,12 @@ module.exports = {
                     chunks:["main"],
                     minify:{
                         html5: true,
-                        // collapseWhitespace: true,
+                        collapseWhitespace: true,
                         preserveLineBreaks: false,
                         minifyCSS: true,
                         minifyJS: true,
                         removeComments: false
                     }
-
                 })
             )
         });

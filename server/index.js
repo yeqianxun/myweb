@@ -18,7 +18,7 @@ const {logger,accessLogger} = require("./lib/logger");
 connectMongoDB();
 
 const app = new Koa();
-const roter = new Router();
+// const roter = new Router();
 // 访问级别的日志
 app.use(accessLogger());
 // 静态资源配置

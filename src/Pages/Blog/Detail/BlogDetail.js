@@ -12,10 +12,11 @@ class BlogDetail extends Component{
     constructor(props){
         super(props)
         this.state = {
-
+            
         }
     }
     componentDidMount(){
+        console.log("yangxinglong=====>compdidmount")
         const {dispatchBlogDetail} = this.props;
         const {params} = this.props.match
         dispatchBlogDetail(params.id);
@@ -32,7 +33,9 @@ class BlogDetail extends Component{
                 </div>
             )
         }
-
+    }
+    componentWillUnmount(){
+        console.log("yangxinglong====unmount",this.getBlogDetail())
     }
     render(){
         return(

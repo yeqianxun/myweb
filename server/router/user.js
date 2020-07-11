@@ -7,4 +7,5 @@ router.get("/",async(ctx,next)=>{
     }
     await next();
 });
+router.get("/login")
 module.exports = router;

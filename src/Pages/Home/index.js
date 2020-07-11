@@ -10,9 +10,9 @@ class HomePage extends Component{
             <div className={style.home_section}>
                 <div className={style.home_wrapper}>  
                     <div className={style.home_logo}></div>
-                    <h3>个人scrum敏捷管理CMS</h3>
+                    <h2>My CMS</h2>
                     <div className={style.home_content}>
-                        <p>一款为自己打造的,应用前端开发技术(Koa2+React16全家桶+MongoDB)开发的web应用，旨在记录收支情况和任务完成度，同时记录一些生活工作中的日常笔记</p>
+                        <p>一款为自己打造的,应用前端开发技术(Koa2+React16全家桶+MongoDB+Nginx)开发的web应用，旨在学习web全栈开发技术，并将自己学到的技术运用于投资理财。</p>
                     </div>
                     <div className={style.home_link}>
                         <Link to="/finance">财务管理</Link>
